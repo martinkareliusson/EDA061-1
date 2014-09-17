@@ -1,5 +1,8 @@
 package Program;
 
+/*
+ * Author: Niclas Lovdahl
+ */
 import java.util.ArrayList;
 import Instructions.Instruction;
 

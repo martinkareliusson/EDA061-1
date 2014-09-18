@@ -10,7 +10,6 @@ public class Mul implements Instruction {
 	}
 
 
-	@Override
 	public void execute(Memory mem) {
 		// TODO Auto-generated method stub
 

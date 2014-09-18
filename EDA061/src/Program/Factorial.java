@@ -2,7 +2,9 @@ package Program;
 
 import Computer.*;
 import Instructions.*;
-
+/*
+ * Program
+ */
 public class Factorial extends Program {
 	public Factorial() {
 		Address n = new Address(0), fac = new Address(1);

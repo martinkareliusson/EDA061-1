@@ -1,18 +1,18 @@
 package Instructions;
 
-import Computer.Address;
-import Computer.LongWord;
-import Computer.Memory;
+import Computer.*;
 
-public class Add implements Instruction {
+public class Add extends Expression {
+	Address a;
+	Operand op1;
+	Operand op2;
 
-	public Add(Address n, LongWord longWord, Address n2) {
-		// TODO Auto-generated constructor stub
+	public Add(Operand op1, Operand op2, Address a) {
+		super(op1, op2, a);
 	}
 
 	public void execute(Memory mem) {
-		// TODO Auto-generated method stub
+		a.getWord(mem).add(op1.getWord(mem), op2.getWord(mem));
 
 	}
-
 }

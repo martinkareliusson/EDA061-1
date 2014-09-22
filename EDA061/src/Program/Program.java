@@ -5,7 +5,8 @@ package Program;
  * Author: Niclas Lovdahl
  */
 import java.util.ArrayList;
-import Instructions.Instruction;
+import Instructions.*;
+import Computer.*;
 
 public class Program {
 
@@ -17,6 +18,10 @@ public class Program {
 	
 	public void add(Instruction i){
 		list.add(i);
+	}
+	
+	public void execute(Memory mem){
+		
 	}
 
 }

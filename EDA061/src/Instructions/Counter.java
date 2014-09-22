@@ -1,9 +1,9 @@
 package Instructions;
 
-public class ProgramCounter {
+public class Counter {
 	private int i;
 
-	public ProgramCounter() {
+	public Counter() {
 		i = 0;
 	}
 

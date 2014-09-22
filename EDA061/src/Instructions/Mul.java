@@ -8,7 +8,7 @@ public class Mul extends Expression {
 		super(op1, op2, a);
 	}
 
-	public void execute(Memory mem) {
+	public void execute(Memory mem, Counter c) {
 		a.getWord(mem).mul(op1.getWord(mem), op2.getWord(mem));
 
 	}

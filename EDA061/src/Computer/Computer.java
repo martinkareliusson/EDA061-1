@@ -1,6 +1,5 @@
 package Computer;
 
-import Instructions.Instruction;
 import Program.Program;
 
 public class Computer {

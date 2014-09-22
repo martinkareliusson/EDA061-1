@@ -10,7 +10,7 @@ public class JumpEq implements Instruction {
 		// TODO Auto-generated constructor stub
 	}
 
-	public void execute(Memory mem) {
+	public void execute(Memory mem, Counter c) {
 		// TODO Auto-generated method stub
 
 	}

@@ -10,7 +10,7 @@ public class Jump implements Instruction {
 		this.i = i;
 	}
 
-	public void execute(Memory mem) {
+	public void execute(Memory mem, Counter c) {
 		// TODO Auto-generated method stub
 
 	}

@@ -10,7 +10,7 @@ public class Copy implements Instruction {
 		this.op2 = op2;
 	}
 
-	public void execute(Memory mem) {
+	public void execute(Memory mem, Counter c) {
 		op2.getWord(mem).copy(op1.getWord(mem));
 
 	}

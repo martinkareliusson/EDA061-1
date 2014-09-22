@@ -15,4 +15,13 @@ public class LongWord extends Word {
 	public long getValue() {
 		return l;
 	}
+
+	public Word getWord(Memory mem) {
+		return this;
+	}
+
+	public Word getWord() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

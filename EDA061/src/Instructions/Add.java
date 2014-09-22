@@ -1,21 +1,18 @@
 package Instructions;
 
 import Computer.*;
-import Program.*;
 
 public class Add extends Expression {
-	Address n;
-	Word word;
-	Address n2;
+	Address a;
+	Operand op1;
+	Operand op2;
 
-	public Add(Address n, Word word, Address n2) {
-		this.n = n;
-		this.word = word;
-		this.n2 = n2;
+	public Add(Operand op1, Operand op2, Address a) {
+		super(op1, op2, a);
 	}
 
 	public void execute(Memory mem) {
-		n2.getWord(mem).add(n.getWord(mem), word);
+		a.getWord(mem).add(op1.getWord(mem), op2.getWord(mem));
 
 	}
 }

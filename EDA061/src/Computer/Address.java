@@ -1,6 +1,6 @@
 package Computer;
 
-public class Address {
+public class Address implements Operand {
 	int i;
 
 	public Address(int i) {
@@ -13,9 +13,10 @@ public class Address {
 
 	public void setValue(long l) {
 		// TODO Auto-generated method stub
-		
+
 	}
-	public void mul(){
-		
+
+	public void mul() {
+
 	}
 }

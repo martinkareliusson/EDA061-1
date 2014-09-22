@@ -8,5 +8,8 @@ public class Halt implements Instruction {
 		// TODO Auto-generated method stub
 
 	}
+	public String toString(){
+		return "HLT";
+	}
 
 }

@@ -14,5 +14,7 @@ public class Jump implements Instruction {
 		// TODO Auto-generated method stub
 
 	}
-
+	public String toString(){
+		return "JMP" + String.valueOf(i);
+	}
 }

@@ -5,9 +5,15 @@ import Computer.LongWord;
 import Computer.Memory;
 
 public class JumpEq implements Instruction {
+	int i;
+	Address n;
+	LongWord longWord;
 
 	public JumpEq(int i, Address n, LongWord longWord) {
-		// TODO Auto-generated constructor stub
+		this.i = i;
+		this.n = n;
+		this.longWord = longWord;
+
 	}
 
 	public void execute(Memory mem, Counter c) {
@@ -15,4 +21,7 @@ public class JumpEq implements Instruction {
 
 	}
 
+	public String toString() {
+		return "JEQ" + String.valueOf(i) + n.toString() + longWord.toString();
+	}
 }

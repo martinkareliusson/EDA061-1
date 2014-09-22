@@ -8,4 +8,9 @@ public class Memory {
 
 	}
 
+	public long getValue(int i) {
+		return memList[i].getValue();
+		
+	}
+
 }

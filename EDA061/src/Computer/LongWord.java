@@ -1,6 +1,6 @@
 package Computer;
 
-public class LongWord {
+public class LongWord extends Word {
 
 	long l;
 
@@ -8,13 +8,11 @@ public class LongWord {
 		this.l = l;
 	}
 
-	public void add(Address a1, Word w, Address a2) {
-		long value = w.getValue() + a1.getValue(null);
-		a2.setValue(value);
-
+	public void add(Word w1, Word w2) {
+		l = w1.getValue() + w2.getValue();
 	}
 
-	public long getValue(){
-		return 1;
+	public long getValue() {
+		return l;
 	}
 }

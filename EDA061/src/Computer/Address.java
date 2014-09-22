@@ -7,8 +7,8 @@ public class Address {
 		this.i = i;
 	}
 
-	public long getValue(Memory mem) {
-		return mem.getValue(i);
+	public Word getWord(Memory mem) {
+		return mem.getWord(i);
 	}
 
 	public void setValue(long l) {

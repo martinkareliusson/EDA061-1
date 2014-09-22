@@ -13,4 +13,8 @@ public class Memory {
 		
 	}
 
+	public Word getWord(int i) {
+		return memList[i];
+	}
+
 }

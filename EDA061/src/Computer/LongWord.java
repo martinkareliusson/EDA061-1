@@ -21,7 +21,16 @@ public class LongWord extends Word {
 	}
 
 	public Word getWord() {
-		// TODO Auto-generated method stub
-		return null;
+		return this;
+	}
+
+	public void mul(Word w1, Word w2) {
+		l = w1.getValue() * w2.getValue();
+
+	}
+
+	public void copy(Word w) {
+		l = w.getValue();
+		
 	}
 }

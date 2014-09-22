@@ -1,17 +1,15 @@
 package Instructions;
 
-import Computer.Address;
-import Computer.Memory;
+import Computer.*;
 
-public class Mul implements Instruction {
+public class Mul extends Expression {
 
-	public Mul(Address fac, Address n, Address fac2) {
-		// TODO Auto-generated constructor stub
+	public Mul(Operand op1, Operand op2, Address a) {
+		super(op1, op2, a);
 	}
 
-
 	public void execute(Memory mem) {
-		// TODO Auto-generated method stub
+		a.getWord(mem).mul(op1.getWord(mem), op2.getWord(mem));
 
 	}
 

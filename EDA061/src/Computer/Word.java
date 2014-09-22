@@ -12,5 +12,7 @@ public abstract class Word implements Operand {
 	
 	public abstract void copy(Word w);
 	
+	public abstract boolean equals(Word w);
+	
 
 }

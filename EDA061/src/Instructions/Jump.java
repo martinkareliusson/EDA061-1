@@ -11,7 +11,7 @@ public class Jump implements Instruction {
 	}
 
 	public void execute(Memory mem, Counter c) {
-		// TODO Auto-generated method stub
+		c.jumpTo(i);
 
 	}
 	public String toString(){

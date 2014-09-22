@@ -31,6 +31,14 @@ public class LongWord extends Word {
 
 	public void copy(Word w) {
 		l = w.getValue();
-		
+
+	}
+
+	@Override
+	public boolean equals(Word w) {
+		if (l == w.getValue()) {
+			return true;
+		}
+		return false;
 	}
 }

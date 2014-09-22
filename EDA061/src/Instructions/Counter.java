@@ -17,8 +17,12 @@ public class Counter {
 	public void halt() {
 		i = -1;
 	}
-	
-	public int getCount(){
+
+	public int getCount() {
 		return i;
+	}
+
+	public void jumpTo(int i) {
+		this.i = i;
 	}
 }

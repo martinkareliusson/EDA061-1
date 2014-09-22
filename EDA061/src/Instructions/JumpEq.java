@@ -1,27 +1,29 @@
 package Instructions;
 
-import Computer.Address;
-import Computer.LongWord;
-import Computer.Memory;
+import Computer.*;
 
 public class JumpEq implements Instruction {
 	int i;
 	Address n;
-	LongWord longWord;
+	Word w;
 
-	public JumpEq(int i, Address n, LongWord longWord) {
+	public JumpEq(int i, Address n, Word w) {
 		this.i = i;
 		this.n = n;
-		this.longWord = longWord;
+		this.w = w;
 
 	}
 
 	public void execute(Memory mem, Counter c) {
-		// TODO Auto-generated method stub
+		if (n.getWord(mem).equals(w.getWord(mem))) {
+			c.jumpTo(i);
+		} else {
+			c.increament();
+		}
 
 	}
 
 	public String toString() {
-		return "JEQ" + String.valueOf(i) + n.toString() + longWord.toString();
+		return "JEQ" + String.valueOf(i) + n.toString() + w.toString();
 	}
 }

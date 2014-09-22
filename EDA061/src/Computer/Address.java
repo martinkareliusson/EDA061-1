@@ -20,4 +20,8 @@ public class Address implements Operand {
 
 	}
 	
+	public int getIndex(){
+		return i;
+	}
+	
 }

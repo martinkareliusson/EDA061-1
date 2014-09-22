@@ -17,9 +17,6 @@ public class Computer {
 	}
 
 	public void run() {
-		for (Instruction i : p.list) {
-			i.execute(mem);
-		}
-
+		p.execute(mem);
 	}
 }

@@ -5,23 +5,19 @@ package Program;
  * Author: Niclas Lovdahl
  */
 import java.util.ArrayList;
-import Instructions.*;
-import Computer.*;
+import Instructions.Instruction;
 
 public class Program {
 
 	public ArrayList<Instruction> list;
 
 	public Program() {
+	
 
 	}
 	
 	public void add(Instruction i){
 		list.add(i);
-	}
-	
-	public void execute(Memory mem){
-		
 	}
 
 }

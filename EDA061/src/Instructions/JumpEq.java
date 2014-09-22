@@ -14,5 +14,7 @@ public class JumpEq implements Instruction {
 		// TODO Auto-generated method stub
 
 	}
-
+	public String toString(){
+		return "JEQ" + String.valueOf(i) + n.toString() + longWord.toString();
+	}
 }

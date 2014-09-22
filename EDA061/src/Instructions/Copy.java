@@ -14,5 +14,8 @@ public class Copy implements Instruction {
 		op2.getWord(mem).copy(op1.getWord(mem));
 
 	}
+	public String toString(){
+		return "CPY" + op1.toString() + op2.toString();
+	}
 
 }

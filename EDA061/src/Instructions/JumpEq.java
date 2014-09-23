@@ -17,13 +17,12 @@ public class JumpEq implements Instruction {
 	public void execute(Memory mem, Counter c) {
 		if (n.getWord(mem).equals(w.getWord(mem))) {
 			c.jumpTo(i);
-		} else {
-			c.increament();
 		}
 
 	}
 
 	public String toString() {
-		return "JEQ" + String.valueOf(i) + n.toString() + w.toString();
+		return "JEQ " + String.valueOf(i) + " [" + n.toString() + "] "
+				+ w.toString();
 	}
 }

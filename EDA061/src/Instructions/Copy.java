@@ -15,8 +15,9 @@ public class Copy implements Instruction {
 		mem.add(a.getIndex(), op1.getWord(mem));
 
 	}
-	public String toString(){
-		return "CPY" + op1.toString() + a.toString();
+
+	public String toString() {
+		return "CPY" + " " + op1.toString() + " [" + a.toString() + "]";
 	}
 
 }

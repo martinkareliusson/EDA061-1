@@ -14,5 +14,7 @@ public abstract class Word implements Operand {
 	
 	public abstract boolean equals(Word w);
 	
+	public abstract String toString();
+	
 
 }

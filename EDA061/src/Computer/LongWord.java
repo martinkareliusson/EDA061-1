@@ -3,6 +3,7 @@ package Computer;
 public class LongWord extends Word {
 
 	long l;
+	String s;
 
 	public LongWord(long l) {
 		this.l = l;
@@ -32,6 +33,12 @@ public class LongWord extends Word {
 	public void copy(Word w) {
 		l = w.getValue();
 
+	}
+	
+	public String toString(){
+		String s = Long.toString(l);
+		return s;
+	
 	}
 
 	@Override

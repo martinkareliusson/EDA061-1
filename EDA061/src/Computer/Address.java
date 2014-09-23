@@ -11,17 +11,12 @@ public class Address implements Operand {
 		return mem.getWord(i);
 	}
 
-	public void setValue(long l) {
-		// TODO Auto-generated method stub
-
-	}
-
-	public void mul() {
-
-	}
-	
 	public int getIndex(){
 		return i;
+	}
+	
+	public String toString(){
+		return Integer.toString(i);
 	}
 	
 }

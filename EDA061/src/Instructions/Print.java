@@ -1,22 +1,22 @@
 package Instructions;
 
-import Computer.Address;
-import Computer.Memory;
+import Computer.*;
 
 public class Print implements Instruction {
-	
-	Address a;
-	
-	public Print(Address a) {
-		this.a = a;
+
+	Operand o;
+
+	public Print(Operand o) {
+		this.o = o;
 	}
 
 	public void execute(Memory mem, Counter c) {
-		// TODO Auto-generated method stub
-		
+		System.out.println(o.getWord(mem).toString());
+
 	}
-	public String toString(){
-		return "PRT" + a.toString();
+
+	public String toString() {
+		return "PRT [" + o.toString() + "]";
 	}
 
 }

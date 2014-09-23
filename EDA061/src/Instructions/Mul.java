@@ -10,10 +10,11 @@ public class Mul extends Expression {
 
 	public void execute(Memory mem, Counter c) {
 		a.getWord(mem).mul(op1.getWord(mem), op2.getWord(mem));
-
 	}
-	public String toString(){
-		return "MUL" + op1.toString() + op2.toString() + a.toString();
+
+	public String toString() {
+		return "MUL " + "[" + op1.toString() + "] " + "[" + op2.toString()
+				+ "] " + "[" + a.toString() + "]";
 	}
 
 }

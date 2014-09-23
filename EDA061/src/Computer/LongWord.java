@@ -34,11 +34,11 @@ public class LongWord extends Word {
 		l = w.getValue();
 
 	}
-	
-	public String toString(){
+
+	public String toString() {
 		String s = Long.toString(l);
 		return s;
-	
+
 	}
 
 	@Override

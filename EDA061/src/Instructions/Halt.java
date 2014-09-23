@@ -8,7 +8,8 @@ public class Halt implements Instruction {
 		c.halt();
 
 	}
-	public String toString(){
+
+	public String toString() {
 		return "HLT";
 	}
 

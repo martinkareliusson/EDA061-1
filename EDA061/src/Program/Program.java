@@ -27,15 +27,9 @@ public class Program {
 		for (int i = 0; i < list.size(); i++) {
 			System.out.println(i + " " + list.get(i).toString());
 		}
-		
+
 		while (c.getCount() >= 0) {
 			list.get(c.getCount()).execute(mem, c);
-			if (c.getCount() == -1) {
-
-			} else {
-				// Do nothing
-			}
-
 			c.increament();
 
 		}

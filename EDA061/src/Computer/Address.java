@@ -11,12 +11,12 @@ public class Address implements Operand {
 		return mem.getWord(i);
 	}
 
-	public int getIndex(){
+	public int getIndex() {
 		return i;
 	}
-	
-	public String toString(){
+
+	public String toString() {
 		return Integer.toString(i);
 	}
-	
+
 }

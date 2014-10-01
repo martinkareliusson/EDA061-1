@@ -2,7 +2,6 @@ package gui.menu;
 
 import gui.StatusLabel;
 import gui.XL;
-
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.PrintJob;
@@ -11,9 +10,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.print.PrinterException;
 import java.awt.print.PrinterJob;
-
 import javax.swing.JMenuItem;
-
 import util.XLException;
 
 class PrintMenuItem extends JMenuItem implements ActionListener {

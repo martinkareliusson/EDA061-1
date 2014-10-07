@@ -2,7 +2,7 @@ package model;
 
 public class CommentSlot implements Slot {
 
-	public CommentSlot() {
+	public CommentSlot(String s) {
 
 	}
 

@@ -5,19 +5,14 @@ import expr.Environment;
 
 public class CircularErrorSlot implements Slot {
 
-	public double value(Environment env) {
+	@Override
+	public double getValue(Environment e) {
 		throw new XLException("Circular Error");
 	}
 
-	public String parse(Environment env) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
 	@Override
-	public double getValue(Environment e) {
-		// TODO Auto-generated method stub
-		return 0;
+	public String toString(Environment e) {
+		throw new XLException("This is an error slot");
 	}
 
 }

@@ -6,17 +6,17 @@ import util.*;
 public class SlotFactory {
 	public Slot build(String s) {
 		ExprParser pars = new ExprParser();
-		if (s.charAt(0) == '#') {
-			CommentSlot slot = new CommentSlot(s);
-		} else {
-			try {
-				ExprSlot slot = new ExprSlot(pars.build(s));
-			} catch (Exception e) {
-				throw new XLException("Error");
+		if (s.length() > 0) {
+			if (s.charAt(0) == '#') {
+				return new CommentSlot(s);
+			} else {
+				try {
+					return new ExprSlot(pars.build(s));
+				} catch (Exception e) {
+					throw new XLException("Error");
+				}
 			}
 		}
 		return null;
 	}
 }
-
-//commit2

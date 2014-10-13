@@ -1,10 +1,12 @@
 package model;
 
 import java.util.HashMap;
+import java.util.Observable;
 
+import util.XLException;
 import expr.*;
 
-public class Sheet implements Environment {
+public class Sheet extends Observable implements Environment {
 
 	HashMap<String, Slot> sheet;
 
@@ -14,7 +16,11 @@ public class Sheet implements Environment {
 	}
 
 	public double value(String name) {
-		return 0;
+		Slot slot = sheet.get(name);
+		if (slot == null) {
+			throw new XLException("Cannot refer to empty slot: " + name);
+		}
+		return slot.getValue(this);
 	}
 
 }

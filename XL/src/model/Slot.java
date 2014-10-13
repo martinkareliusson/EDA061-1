@@ -1,6 +1,8 @@
 package model;
 
+import expr.Environment;
+
 public interface Slot {
-	
-	public String getValue();
+
+	public double getValue(Environment e);
 }

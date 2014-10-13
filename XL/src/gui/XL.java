@@ -4,18 +4,24 @@ import static java.awt.BorderLayout.CENTER;
 import static java.awt.BorderLayout.NORTH;
 import static java.awt.BorderLayout.SOUTH;
 import gui.menu.XLMenuBar;
+
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.print.PageFormat;
 import java.awt.print.Printable;
+
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+
+import model.Sheet;
 
 public class XL extends JFrame implements Printable {
     private static final int ROWS = 10, COLUMNS = 8;
     private XLCounter counter;
     private StatusLabel statusLabel = new StatusLabel();
     private XLList xlList;
+    private Sheet sheet;
+    private CurrentSlot currentSlot;
 
     public XL(XL oldXL) {
         this(oldXL.xlList, oldXL.counter);
@@ -23,13 +29,15 @@ public class XL extends JFrame implements Printable {
 
     public XL(XLList xlList, XLCounter counter) {
         super("Untitled-" + counter);
+		sheet = new Sheet();
+		currentSlot = new CurrentSlot();
         this.xlList = xlList;
         this.counter = counter;
         xlList.add(this);
         counter.increment();
-        JPanel statusPanel = new StatusPanel(statusLabel);
-        JPanel sheetPanel = new SheetPanel(ROWS, COLUMNS);
-        Editor editor = new Editor();
+        JPanel statusPanel = new StatusPanel(statusLabel, currentSlot);
+        JPanel sheetPanel = new SheetPanel(ROWS, COLUMNS, currentSlot, sheet);
+        Editor editor = new Editor(currentSlot, sheet, statusLabel);
         add(NORTH, statusPanel);
         add(CENTER, editor);
         add(SOUTH, sheetPanel);

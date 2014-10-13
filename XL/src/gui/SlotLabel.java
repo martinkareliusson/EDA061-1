@@ -54,11 +54,15 @@ public class SlotLabel extends ColoredLabel implements MouseListener, Observer{
 		// TODO Auto-generated method stub
 
 	}
-
-	@Override
-	public void update(Observable o, Object arg) {
-		// TODO Auto-generated method stub
-		
+	public String name() {
+		return slotName;
 	}
 
+	@Override
+	public void update(Observable arg0, Object arg1) {
+		currentSlot.deleteObserver(this);
+		setText(slotName);
+	
+	}
+	
 }

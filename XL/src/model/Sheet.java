@@ -3,6 +3,7 @@ package model;
 import java.util.HashMap;
 import java.util.Map.Entry;
 import java.util.Observable;
+import java.util.Set;
 
 import util.XLException;
 import expr.*;
@@ -33,7 +34,6 @@ public class Sheet extends Observable implements Environment {
 		checkLoop(name, slot);
 		sheet.put(name, slot);
 		updateSheet();
-		
 	}
 
 	private void checkLoop(String name, Slot slot) {
@@ -72,35 +72,36 @@ public class Sheet extends Observable implements Environment {
 	public Slot getSlot(String slotKey) {
 		return sheet.get(slotKey);
 	}
-	public Slot getSlotName(String slotKey) {
-		return sheet.get(slotKey);
-	}
 
 	public double slotValue(String slotKey) {
 		return sheet.get(slotKey).getValue(this);
 	}
-	
-	public void load(HashMap<String, Slot> newSheet){
+
+	public void load(HashMap<String, Slot> newSheet) {
 		HashMap<String, Slot> oldSheet = sheet;
 		sheet = newSheet;
 		try {
-			for(Entry<String, Slot> entry : sheet.entrySet()){
+			for (Entry<String, Slot> entry : sheet.entrySet()) {
 				checkLoop(entry.getKey(), entry.getValue());
 			}
-		} catch (XLException e){
+		} catch (XLException e) {
 			sheet = oldSheet;
 			throw e;
 		}
 		updateSheet();
 	}
-	
-	public void clearSheet(){
+
+	public void clearSheet() {
 		sheet = new HashMap<String, Slot>();
 		updateSheet();
 	}
-	
-	public void updateSheet(){
+
+	public void updateSheet() {
 		setChanged();
 		notifyObservers();
+	}
+
+	public Set<Entry<String, Slot>> getEntries() {
+		return sheet.entrySet();
 	}
 }

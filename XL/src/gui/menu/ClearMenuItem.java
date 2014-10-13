@@ -1,16 +1,26 @@
 package gui.menu;
 
+import gui.CurrentSlot;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
 import javax.swing.JMenuItem;
 
-class ClearMenuItem extends JMenuItem implements ActionListener {
-    public ClearMenuItem() {
-        super("Clear");
-        addActionListener(this);
-    }
+import model.Sheet;
 
-    public void actionPerformed(ActionEvent e) {
-        // TODO
-    }
+class ClearMenuItem extends JMenuItem implements ActionListener {
+	private Sheet sheet;
+	private CurrentSlot currentSlot;
+
+	public ClearMenuItem(CurrentSlot currentSlot, Sheet sheet) {
+		super("Clear");
+		this.currentSlot = currentSlot;
+		this.sheet = sheet;
+		addActionListener(this);
+	}
+
+	public void actionPerformed(ActionEvent e) {
+		sheet.removeSlot(currentSlot.getName());
+	}
 }

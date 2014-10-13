@@ -18,7 +18,7 @@ public class ExprSlot implements Slot {
 		return new Double(getValue(e)).toString();
 	}
 
-	public String toString() {
+	public String toString(Environment e) {
 		return expr.toString();
 	}
 
